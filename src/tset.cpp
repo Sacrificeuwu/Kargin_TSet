@@ -32,39 +32,6 @@ TSet::operator TBitField()
     return res;
 }
 
-void TSet::EvenElem() const
-{
-	TSet add(MaxPower);
-	for (int i = 0; i < MaxPower; i++)
-	{
-		if (i % 2 == 0) add.InsElem(i);
-	}
-    add = add * *this;
-	cout << add;
-}
-
-void TSet::NotEvenElem() const
-{
-	TSet add(MaxPower);
-	for (int i = 0; i < MaxPower; i++)
-	{
-		if (i % 2 == 1) add.InsElem(i);
-	}
-    add = add * *this;
-	cout << add;
-}
-
-void TSet::MultipleNumber(int k) const
-{
-	TSet add(MaxPower);
-	for (int i = 0; i < MaxPower; i++)
-	{
-		if (i % k == 0) add.InsElem(i);
-	}
-    add = add * *this;
-	cout << add;
-}
-
 int TSet::GetMaxPower(void) const // получить макс. к-во эл-тов
 {
     return MaxPower;
